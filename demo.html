@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .demo-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .demo-section h2 {
+            color: white;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .demo-section p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+        .embed-demo {
+            grid-column: 1 / -1;
+        }
+        .embed-demo iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            color: #f8f8f2;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🌤️ Weather Widget Demo</h1>
+        
+        <div class="demo-grid">
+            <div class="demo-section">
+                <h2>📋 Features</h2>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">🌤️</div>
+                        <p>Current Weather</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📅</div>
+                        <p>5-Day Forecast</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">💾</div>
+                        <p>Local Caching</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <p>Responsive</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-section">
+                <h2>🔧 Integration</h2>
+                <p>Easy to embed in any website using an iframe:</p>
+                <div class="code-block">
+                    <code>&lt;iframe src="embed.html" width="100%" height="500"&gt;&lt;/iframe&gt;</code>
+                </div>
+                <p>Perfect for:</p>
+                <ul style="color: rgba(255, 255, 255, 0.9);">
+                    <li>Smartboards in classrooms</li>
+                    <li>Digital signage</li>
+                    <li>WordPress websites</li>
+                    <li>Any web application</li>
+                </ul>
+            </div>
+            
+            <div class="demo-section embed-demo">
+                <h2>🖥️ Live Demo</h2>
+                <p>This is how the widget looks when embedded:</p>
+                <iframe src="embed.html"></iframe>
+            </div>
+            
+            <div class="demo-section">
+                <h2>⚡ Performance</h2>
+                <p>The widget is optimized for performance:</p>
+                <ul style="color: rgba(255, 255, 255, 0.9);">
+                    <li><strong>Fast Loading:</strong> Uses cached data when available</li>
+                    <li><strong>Auto Updates:</strong> Refreshes twice daily</li>
+                    <li><strong>Offline Ready:</strong> Works without internet using cache</li>
+                    <li><strong>No API Keys:</strong> Uses free Open-Meteo service</li>
+                </ul>
+            </div>
+            
+            <div class="demo-section">
+                <h2>🎨 Customization</h2>
+                <p>The widget adapts its theme based on weather conditions:</p>
+                <ul style="color: rgba(255, 255, 255, 0.9);">
+                    <li><strong>Sunny:</strong> Warm gradient colors</li>
+                    <li><strong>Cloudy:</strong> Cool blue tones</li>
+                    <li><strong>Rainy:</strong> Fresh green gradients</li>
+                    <li><strong>Snowy:</strong> Cool winter colors</li>
+                    <li><strong>Night:</strong> Dark theme</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
